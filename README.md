@@ -37,6 +37,6 @@ After:
 ```scala
 package com.austinito
 
-import a.{A, B,C}
+import a.{A, B, C}
 import b.{A, _}
 ```

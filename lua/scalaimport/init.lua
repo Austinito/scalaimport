@@ -65,7 +65,7 @@ local function merge_identifiers(pre, post)
     local merged = ""
     if (vim.startswith(pre["identifier"], "{")) then
         --replace the last char with
-        merged = string.gsub(pre["identifier"], "}", "," .. post["identifier"] .. "}")
+        merged = string.gsub(pre["identifier"], "}", ", " .. post["identifier"] .. "}")
     else
         merged = "{" .. pre["identifier"] .. ", " .. post["identifier"] .. "}"
     end
