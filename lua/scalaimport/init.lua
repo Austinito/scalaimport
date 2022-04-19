@@ -95,11 +95,9 @@ end
 local function group_imports(decls)
     -- split into path and value
     local typed_decls = split_path(decls)
-    Print(typed_decls, "typed_decls: ")
-    merge_paths(typed_decls)
-
-
     local result = {}
+
+    merge_paths(typed_decls)
     for _, t_decl in pairs(typed_decls) do
         table.insert(result, t_decl["path"] .. t_decl["identifier"])
     end
